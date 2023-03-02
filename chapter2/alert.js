@@ -28,8 +28,8 @@
 // alert(`hello ${names}`); // hello Ilya
 
 // // 6
-// let userName = prompt("What is your name?", "");
-// alert(`Hello ${userName}`);
+// let usrName = prompt("What is your name?", "");
+// alert(`Hello ${usrName}`);
 
 // //7
 // let a = 1,
@@ -146,7 +146,7 @@
 //  //
 
 // alert( null || 2 && 3 || 4 ); // 3 : and дает результат 3 и дальше чекается нулл или 3 или 4
-// первый вравильный овет это 3
+// // первый вравильный овет это 3
 
 // let age = prompt("your age?", '');
 
@@ -180,7 +180,7 @@
 
 // //
 
-// let i = 3;
+//  i = 3;
 
 // while (i) {
 //   alert( i-- ); // 1 так как i-- передает старое значение а не обновленное
@@ -188,7 +188,7 @@
 
 // //
 
-// let i = 0;
+//  i = 0;
 // while (++i < 5) alert( i ); // поседний алерт будет 4
 
 // i = 0;
@@ -209,10 +209,76 @@
 //   i++;
 // }
 // //
-let i;
-i = prompt("Enter your number", "");
-while (i <= 100 || i !== null || i != "") {
-  console.log(i <= 100 || i !== null || i != "");
-  console.log(i <= 100 );
-  i = prompt("Try again", "");
+// let i;
+// i = prompt("Enter your number", "");
+// console.log("here");
+// while (i <= 100 && i) {
+
+//         i = prompt("Try again", "");
+// }
+
+// //
+
+// let n = prompt("enter the number", "");
+
+// for (let i = 1; i < n + 1; i++) {
+//   isDevidable = 0;
+//   for (let j = 2; j < i; j++) {
+//     if (i % j == 0) {
+//       isDevidable = true;
+//     }
+//   }
+//   if (!isDevidable) {
+//     alert(`The number ${i} is prime`);
+//   }
+// }
+
+// //
+// let borwser = "Opera";
+// if (browser == "Edge") {
+//   alert("You've got the Edge!");
+// } else if (
+//   browser == "Chrome" ||
+//   browser == "Firefox" ||
+//   browser == "Safari" ||
+//   browser == "Opera"
+// ) {
+//   alert("Okay we support these browsers too");
+// } else {
+//   alert("We hope that this page looks ok!");
+// }
+// ///
+// const number = +prompt("Введите число между 0 и 3", "");
+
+// switch (number) {
+//   case 0:
+//     alert("Вы ввели число 0");
+//     break;
+//   case 1:
+//     alert("Вы ввели число 1");
+//     break;
+//   case 2:
+//   case 3:
+//     alert("Вы ввели число 2, а может и 3");
+// }
+
+// //
+// // Обязателен ли "else"? -- no, второй вариант работает так же хорошо
+
+function checkAge(age) {
+  return age > 18 ? true : confirm("Родители разрешили?");
+}
+function checkAge2(age) {
+  return age > 18 || confirm("Родители разрешили?");
+}
+
+function min(a,b) {
+    return a>b ?b:a;
+}
+
+function pow(a,b) {
+    for ( ){
+
+    }
+    rerutn 
 }
