@@ -161,20 +161,58 @@
 // if (null || -1 && 1) alert( 'third' ); // выолнается
 
 // //
-let userName = prompt("Кто там?", "");
+// let userName = prompt("Кто там?", "");
 
-if (userName === "Админ") {
-  let password = prompt("Пароль?", "");
+// if (userName === "Админ") {
+//   let password = prompt("Пароль?", "");
+//   if (password === "" || password === null) {
+//     alert("Отменено");
+//   } else if (password === "Я главный") {
+//     alert("Здравствуйте!");
+//   } else {
+//     alert("Неверный пароль");
+//   }
+// } else if (userName === "" || userName === null) {
+//   alert("Отменено");
+// } else {
+//   alert("Я вас не знаю");
+// }
 
-  if (password === "" || password === null) {
-    alert("Отменено");
-  } else if (password === "Я главный") {
-    alert("Здравствуйте!");
-  } else {
-    alert("Неверный пароль");
-  }
-} else if (userName === "" || userName === null) {
-  alert("Отменено");
-} else {
-  alert("Я вас не знаю");
+// //
+
+// let i = 3;
+
+// while (i) {
+//   alert( i-- ); // 1 так как i-- передает старое значение а не обновленное
+// }
+
+// //
+
+// let i = 0;
+// while (++i < 5) alert( i ); // поседний алерт будет 4
+
+// i = 0;
+// while (i++ < 5) alert( i ); // последний алерт будет  5
+
+// //
+// for (let i = 0; i < 5; i++) alert( i );
+// for (let i = 0; i < 5; ++i) alert( i ); // Одинаковые прирост i будет всегда идти перед сравнение с 5
+// // поэтому в данном случае финальный алерт будет на 4
+
+// 3
+// for (let i = 0; i < 3; i++) {
+//   alert(`number ${i}!`);
+// }
+// i = 0;
+// while (i < 3) {
+//   alert(`number ${i}!`);
+//   i++;
+// }
+// //
+let i;
+i = prompt("Enter your number", "");
+while (i <= 100 || i !== null || i != "") {
+  console.log(i <= 100 || i !== null || i != "");
+  console.log(i <= 100 );
+  i = prompt("Try again", "");
 }
