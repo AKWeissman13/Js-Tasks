@@ -265,20 +265,25 @@
 // //
 // // Обязателен ли "else"? -- no, второй вариант работает так же хорошо
 
-function checkAge(age) {
-  return age > 18 ? true : confirm("Родители разрешили?");
-}
-function checkAge2(age) {
-  return age > 18 || confirm("Родители разрешили?");
-}
+// function checkAge(age) {
+//   return age > 18 ? true : confirm("Родители разрешили?");
+// }
+// function checkAge2(age) {
+//   return age > 18 || confirm("Родители разрешили?");
+// }
 
-function min(a,b) {
-    return a>b ?b:a;
-}
+// function min(a, b) {
+//   return a > b ? b : a;
+// }
 
-function pow(a,b) {
-    for ( ){
-
-    }
-    rerutn 
-}
+// function pow(a, b) {
+//     let c = a;
+//   for (let i = 1; i < b; i++) {
+//     c = c * a;
+//   }
+//   return c;
+// }
+// alert(pow(3, 2));
+// alert(pow(3, 3));
+// alert(pow(1, 100));
+// //
