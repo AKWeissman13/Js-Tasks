@@ -129,4 +129,52 @@
 
 // //
 
+// alert(null || 2 || undefined); // 2 единственное верно среди этих трех вариантов
 
+// //
+
+// alert(alert(1) || 2 || alert(3)); // 1 и 2
+
+// //
+
+// alert( 1 && null && 2 ); // null два верных и одно неверное утверждений дает null
+
+// //
+
+// alert( alert(1) && alert(2) ); // 1 и undefined alert(1) возвращает undefined
+
+//  //
+
+// alert( null || 2 && 3 || 4 ); // 3 : and дает результат 3 и дальше чекается нулл или 3 или 4
+// первый вравильный овет это 3
+
+// let age = prompt("your age?", '');
+
+// x = (age >= 14 && age <=90)? true : false;
+// y = (age < 14 || age > 90)? false : true;
+// alert(x);
+// alert(y);
+
+// // //
+// if (-1 || 0) alert( 'first' ); // выолнается
+// if (-1 && 0) alert( 'second' ); // невыолнается
+// if (null || -1 && 1) alert( 'third' ); // выолнается
+
+// //
+let userName = prompt("Кто там?", "");
+
+if (userName === "Админ") {
+  let password = prompt("Пароль?", "");
+
+  if (password === "" || password === null) {
+    alert("Отменено");
+  } else if (password === "Я главный") {
+    alert("Здравствуйте!");
+  } else {
+    alert("Неверный пароль");
+  }
+} else if (userName === "" || userName === null) {
+  alert("Отменено");
+} else {
+  alert("Я вас не знаю");
+}
