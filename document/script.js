@@ -276,4 +276,168 @@
 //   });
 // }
 
- // // 
+// // Создайте календарь в виде таблицы
+
+// year = prompt("Enter year", "");
+// month = prompt("Enter month in number", "");
+// document.body.innerHTML = "";
+// let elem = document.createElement("div");
+// createCalendar(elem, year, month - 1);
+
+// function createCalendar(elem, year, month) {
+//   const dates = new Date(year, month);
+//   let date = "";
+//   while (dates.getMonth() == month) {
+//     if (dates.getDay() == 1 || dates.getDate() == 1) {
+//       date += "<tr>";
+//     }
+//     if (dates.getDate() == 1 && dates.getDay() != 1) {
+//       if (dates.getDay() == 0) {
+//         date += "<td></td>".repeat(6);
+//       } else {
+//         date += "<td></td>".repeat(dates.getDay() - 1);
+//       }
+//     }
+//     date += "<td>" + dates.getDate() + "</td>";
+
+//     dates.setDate(dates.getDate() + 1);
+//     if (dates.getDay() == 1) {
+//       date += "</tr>";
+//     }
+//   }
+//   elem.innerHTML = `
+//     <table>
+//     <thead>
+//       <tr>
+//         <th scope="col">Пн</th>
+//         <th scope="col">Вт</th>
+//         <th scope="col">Ср</th>
+//         <th scope="col">Чт</th>
+//         <th scope="col">Пт</th>
+//         <th scope="col">Сб</th>
+//         <th scope="col">Вс</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//     ${date}
+//     </tbody>
+//     </table>
+//     `;
+//   document.body.appendChild(elem);
+// }
+
+// // Цветные часы с использованием setInterval
+// document.body.innerHTML = `
+// <div class="time">
+//       <span class="hh">hh</span>
+//       :
+//       <span class="mm">mm</span>
+//       :
+//       <span class="ss">ss</span>
+//     </div>
+//     <div class="buttons">
+//       <button class="start">Start</button>
+//       <button class="stop">stop</button>
+//     </div>
+// `;
+// let bodyStyle = document.body.style;
+// bodyStyle.height = "100vh";
+// bodyStyle.display = "flex";
+// bodyStyle.flexDirection = "column";
+// bodyStyle.alignItems = "center";
+// bodyStyle.justifyContent = "center";
+// let hh = document.querySelector(".hh");
+// hh.style.color = "red";
+// let mm = document.querySelector(".mm");
+// mm.style.color = "green";
+// let ss = document.querySelector(".ss");
+// ss.style.color = "blue";
+// let returnInfo = false;
+// let buttons = document.querySelectorAll("button");
+// let myVar;
+// buttons[0].addEventListener("click", () => {
+//   returnInfo = true;
+//   myVar = setInterval("showTime()", 1000);
+//   showTime();
+// });
+// buttons[1].addEventListener("click", () => {
+//   returnInfo = false;
+//   clearInterval(myVar);
+// });
+// function showTime() {
+//   let time = new Date();
+
+//   if (returnInfo) {
+//     hh.innerHTML = time.getHours();
+//     if (time.getHours() < 10) hh.innerHTML = "0" + time.getHours();
+//     ss.innerHTML = time.getSeconds();
+//     if (time.getSeconds() < 10)   ss.innerHTML = "0" + time.getSeconds();
+//     mm.innerHTML = time.getMinutes();
+//     if (time.getMinutes < 10) mm.innerHTML = "0" + time.getMinutes();
+//   }
+// }
+
+// // Вставьте HTML в список
+// document.body.innerHTML = `<ul id="ul">
+// <li id="one">1</li>
+// <li id="two">4</li>
+// </ul>`;
+// let li1 = document.body.querySelector("#one");
+// li1.insertAdjacentHTML("AfterEnd", "<li>2</li><li>3</li>");
+
+// // Сортировка таблицы
+// document.body.innerHTML = `<table>
+// <thead>
+//   <tr>
+//     <th>Name</th><th>Surname</th><th>Age</th>
+//   </tr>
+// </thead>
+// <tbody>
+//   <tr>
+//     <td>John</td><td>Smith</td><td>10</td>
+//   </tr>
+//   <tr>
+//     <td>Pete</td><td>Brown</td><td>15</td>
+//   </tr>
+//   <tr>
+//     <td>Ann</td><td>Lee</td><td>5</td>
+//   </tr>
+//   <tr>
+//     <td>...</td><td>...</td><td>...</td>
+//   </tr>
+// </tbody>
+// </table>`;
+// let tbody = document.body.querySelector("tbody");
+// rows = document.body.querySelectorAll("tr");
+// let arr = Array.from(rows).slice(1);
+
+// arr.sort((current, next) =>
+//   current.firstElementChild.textContent > next.firstElementChild.textContent
+//     ? 1
+//     : -1
+// );
+// tbody.append(...arr);
+
+// // Создать уведомление
+// document.body.innerHTML = "";
+// function showNotification({ top = 0, right = 0, html = "", className = "" }) {
+//   document.body.innerHTML = `
+// <div class="notification"> </div>
+// `;
+//   let obj = document.body.querySelector(".notification");
+//   obj.style.position = "absolute";
+//   obj.style.top = top;
+//   obj.style.right = right;
+//   obj.innerHTML = html;
+//   obj.classList.add(className);
+
+//   setTimeout(() => obj.remove(), 1500)
+// }
+// setInterval(() => {
+//   showNotification({
+//     top: 10, // 10px от верхней границы окна (по умолчанию 0px)
+//     right: 10, // 10px от правого края окна (по умолчанию 0px)
+//     html: "Hello!", // HTML-уведомление
+//     className: "welcome", // дополнительный класс для div (необязательно)
+//   });
+// }, 2000);
